@@ -1,0 +1,17 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ig="http://schemas.infragistics.com/xaml" xmlns:Custom="http://infragistics.com/DataPresenter" xmlns:local="clr-namespace:WpfApplication2.View" x:Class="WpfApplication2.View.Application2ContainerUserControl" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" 
+             d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:PieChartUserControl HorizontalAlignment="Stretch" Grid.Row="0" VerticalAlignment="Stretch"/>
+    </Grid>
+</UserControl>

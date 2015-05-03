@@ -1,0 +1,48 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApplication2.View" 
+             xmlns:Custom="http://infragistics.com/DataPresenter" 
+             x:Class="WpfApplication2.View.Application1ContainerUserControl" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" 
+             d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <local:RequestConfigUserControl 
+			Grid.Row="0" 
+			Grid.Column="0" 
+			Grid.ColumnSpan="2" 
+			Margin="3"
+			HorizontalAlignment="Stretch" 
+			VerticalAlignment="Stretch"/>
+
+        <local:TreeViewUserControler 
+            BorderThickness="1"
+            BorderBrush="DarkGray"
+			Grid.Row="1" 
+			Grid.Column="0" 
+			Margin="3" 
+            Padding="3"
+			HorizontalAlignment="Stretch"
+			VerticalAlignment="Stretch"/>
+        <local:GridUserControl
+            BorderThickness="1"
+            BorderBrush="DarkGray"
+			Grid.Row="1" 
+			Grid.Column="1" 
+			Margin="3" 
+            Padding="3"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch" />
+    </Grid>
+</UserControl>

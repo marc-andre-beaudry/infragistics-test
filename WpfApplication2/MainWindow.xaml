@@ -1,0 +1,33 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ig="http://schemas.infragistics.com/xaml" 
+        xmlns:View="clr-namespace:WpfApplication2.View"
+        x:Class="WpfApplication2.MainWindow"
+        Height="720" 
+        Width="1280"
+        MinHeight="600"
+        MinWidth="800">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/WpfApplication2;component/MainWindowStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Window.Style>
+        <Binding Mode="OneWay" Source="{StaticResource MyWindowStyle}"/>
+    </Window.Style>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <View:ApplicationControlBar x:Name="ApplicationControlBar" Grid.Row="0" Grid.Column="0" Margin="-10,0,-10,-0"/>
+        <View:Application1ContainerUserControl x:Name="App1" Grid.Row="1" Grid.Column="0" Visibility="Visible"/>
+        <View:Application2ContainerUserControl x:Name="App2" Grid.Row="1" Grid.Column="0" Visibility="Hidden" />
+    </Grid>
+</Window>
